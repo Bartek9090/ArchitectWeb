@@ -1,0 +1,171 @@
+.contact {
+    width: 100%;
+    height: 80vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+
+    @media(max-width: 1700px) {
+        height: 35rem;
+        margin-top: 4rem;
+    }
+
+    .contact-wrapper {
+        width: 60%;
+        height: 40rem;
+        display: flex;
+        box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
+
+        @media(max-width: 1700px) {
+            height: 30rem;
+            margin-top: 4rem;
+        }
+
+        .contact-left {
+            width: 35%;
+            background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+                url(/assets/img/contact-bg.jpg) center no-repeat;
+            background-size: cover;
+
+            @media(max-width: 700px) {
+                width: 0;
+            }
+        }
+
+        .contact-right {
+            width: 65%;
+            background-color: #eee;
+            padding: 3rem 10rem 10rem 10rem;
+
+            @media (max-width: 1100px) {
+                width: 85%;
+                padding: 3rem 10rem 6rem 10rem;
+            }
+
+            @media(max-width: 700px) {
+                width: 100%;
+            }
+
+            @media(max-width: 400px) {
+                padding: 3rem 5rem 6rem 5rem;
+            }
+
+
+            .contact-heading {
+                font-family: 'Baloo Da 2', serif;
+                font-size: 4rem;
+                font-weight: 300;
+                color: #272727;
+                margin-bottom: 5rem;
+                text-align: center;
+
+                @media (max-width: 1100px) {
+                    font-size: 3rem;
+                }
+
+                @media(max-width: 500px) {
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media(max-width: 500px) {
+                    width: 70%;
+                }
+
+                .input-group {
+                    height: 4rem;
+                    position: relative;
+
+                    .message {
+                        padding-top: 1rem;
+                    }
+
+                    .field {
+                        width: 20rem;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 0.6px dashed #636363;
+                        margin: 1px 0;
+
+                        font-family: "Muli", serif;
+                        font-size: 1rem;
+                        color: #4b4b4b;
+
+                        @media(max-width: 500px) {
+                            width: 10rem;
+                        }
+
+                        &:focus {
+                            border-bottom-style: solid;
+                        }
+                    }
+
+                    textarea {
+                        max-height: 14rem;
+                        max-width: 20rem;
+                    }
+
+                    label {
+                        position: absolute;
+                        left: 0;
+                        top: 1rem;
+                        font-family: "Baloo Da 2", serif;
+                        font-size: 1rem;
+                        color: #3b4b4b;
+                        text-transform: uppercase;
+                        pointer-events: none;
+                        transition: all 0.3s;
+
+                        .input-label {
+                            bottom: 1rem;
+                        }
+                    }
+                }
+
+                .submit-btn {
+                    width: 20rem;
+                    height: 4rem;
+                    background-color: $primaryColor;
+                    color: #fff;
+                    border: none;
+                    margin-top: 2rem;
+                    font-family: "Muli", serif;
+                    font-size: 2rem;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+                    box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+
+                    @media(max-width: 1400px) {
+                        margin-top: 0rem;
+                        width: 9rem;
+                        height: 3rem;
+                        font-size: 1.5rem;
+                    }
+
+                    @media(max-width: 400px) {
+                        height: 2rem;
+                        font-size: 1.5rem;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+.field:focus~label {
+    transform: translateY(-3rem);
+    font-size: 1.2rem;
+}

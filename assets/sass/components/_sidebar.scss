@@ -1,0 +1,74 @@
+.sidebar {
+    width: 12rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+	background-color: rgb(199, 177, 177);
+	z-index: 100;  
+	@media(max-width: 600px) {
+		width: 100%;
+		right: -100%;
+
+			  }	
+
+	.menu{
+		position: absolute;
+		top: 40%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		.menu-item{
+			text-align: center;
+
+			.menu-link{
+				font-family: "Baloo Da 2" serif;
+				font-size: 1.2rem;
+				color: #555;
+				position: relative;
+				&::before{
+					content: attr(data-content);
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: $primaryColor;
+					width: 0;
+					overflow: hidden;
+					white-space: nowrap;
+					transition: width 0.3s ease-in-out;
+					
+				}
+				&:hover::before{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.social-media{
+		position: absolute;
+		bottom: 1rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		i{
+			font-size: 1rem;
+			margin: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
+			background-color: #777;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			&:hover{
+				background-color: $primaryColor;
+			}
+		}
+		}
+}
+
+.change .sidebar{
+	right: 0rem;
+	transition: right 1.5s;
+	
+}

@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    height: 6rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-content {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 500px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+                  }	
+
+        .copyright {
+            font-family: "Baloo Da 2", serif;
+            font-size: 1.2rem;
+            color: #a7a7a7;
+        }
+		.social-list{
+			margin: 0 2rem;
+           
+			i{
+				color: #a7a7a7;
+				padding: 0 1.5rem;
+                @media(max-width: 600px) {
+                    padding: 0 .5rem;
+    
+                          }				
+			}
+		}
+    }
+}

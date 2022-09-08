@@ -1,0 +1,30 @@
+@import "variables";
+
+@import "base";
+
+
+// hamburger menu
+@import 'components/menu';
+
+// sidebar menu
+@import 'components/sidebar';
+
+// section-1
+@import "sections/section-1";
+
+// section-2
+@import "sections/section-2"; 
+
+// section-3
+@import "sections/section-3";
+
+// section-4
+@import "sections/section-4";
+
+// footer
+
+@import "components/footer";
+
+// // scroll btn
+
+@import "components/scrollBtn";
